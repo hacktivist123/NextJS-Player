@@ -1,5 +1,5 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import PlayerLaout from "./components/pageLayout";
+import PlayerLayout from "./components/playerLayout";
 import "reset-css";
 import "../styles/globals.css";
 
@@ -33,9 +33,9 @@ const theme = extendTheme({
 const MyApp = ({ Component, pageProps }) => {
   return (
     <ChakraProvider theme={theme}>
-      <PlayerLaout>
+      <PlayerLayout>
         <Component {...pageProps} />
-      </PlayerLaout>
+      </PlayerLayout>
     </ChakraProvider>
   );
 };

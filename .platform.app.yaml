@@ -33,7 +33,7 @@ hooks:
 # The configuration of the application when it is exposed to the web.
 web:
   commands:
-    start: npx next start -p $PORT
+    start: yarn run start -p $PORT
 
 # The size of the persistent disk of the application (in MB).
 disk: 512

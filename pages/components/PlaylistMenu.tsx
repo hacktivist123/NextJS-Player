@@ -3,7 +3,7 @@ import NextLink from "next/link";
 
 const playlists = new Array(30).fill(1).map((_, i) => `Playlist ${i + 1}`);
 
-const PlaylistMenu = () => {
+const playlistMenu = () => {
   return (
     <Box height="66%" overflowY="auto" paddingY="20px">
       <List spacing={3}>
@@ -21,4 +21,4 @@ const PlaylistMenu = () => {
   );
 };
 
-export default PlaylistMenu;
+export default playlistMenu;

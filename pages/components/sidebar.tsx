@@ -16,7 +16,8 @@ import {
   MdPlaylistAdd,
   MdFavorite,
 } from "react-icons/md";
-import PlaylistMenu from "./PlaylistMenu";
+
+import PlaylistMenu from "./playlistMenu";
 
 const navMenu = [
   {
@@ -49,7 +50,7 @@ const musicMenu = [
   },
 ];
 
-const PlayerSideBar = () => {
+const playerSideBar = () => {
   return (
     <Box
       width="100%"
@@ -109,4 +110,4 @@ const PlayerSideBar = () => {
   );
 };
 
-export default PlayerSideBar;
+export default playerSideBar;

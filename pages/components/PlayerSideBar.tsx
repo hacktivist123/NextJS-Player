@@ -1,3 +1,5 @@
+import NextImage from "next/image";
+import NextLink from "next/link";
 import {
   Box,
   List,
@@ -6,6 +8,7 @@ import {
   Divider,
   Center,
   LinkOverlay,
+  LinkBox,
 } from "@chakra-ui/layout";
 import {
   MdHome,
@@ -15,6 +18,33 @@ import {
   MdFavorite,
 } from "react-icons/md";
 
+const navMenu = [
+  {
+    name: "Home",
+    icon: MdHome,
+    route: "/",
+  },
+  {
+    name: "Search",
+    icon: MdSearch,
+    route: "/search",
+  },
+  {
+    name: "Your Library",
+    icon: MdLibraryMusic,
+    route: "/library",
+  },
+  // {
+  //   name: "Create Playlist",
+  //   icon: MdPlaylistAdd,
+  //   route: "/create-playlist",
+  // },
+  // {
+  //   name: "Liked Songs",
+  //   icon: MdFavorite,
+  //   route: "/liked-songs",
+  // },
+];
 const PlayerSideBar = () => {
   return (
     <Box
@@ -24,7 +54,26 @@ const PlayerSideBar = () => {
       paddingX="5px"
       color="gray"
     >
-      SideBar
+      <Box paddingY="20px">
+        <Box width="120px" marginBottom="20px" paddingX="20px" />
+        <NextImage src="/logo.svg" height={60} width={120} />
+      </Box>
+      <Box marginBottom="20px">
+        <List spacing={2}>
+          {navMenu.map((menu) => (
+            <ListItem paddingX="20px" fontSize="16px" key={menu.name}>
+              <LinkBox>
+                <NextLink href={menu.route} passHref>
+                  <LinkOverlay>
+                    <ListIcon as={menu.icon} color="white" marginRight="20px" />
+                    {menu.name}
+                  </LinkOverlay>
+                </NextLink>
+              </LinkBox>
+            </ListItem>
+          ))}
+        </List>
+      </Box>
     </Box>
   );
 };

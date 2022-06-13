@@ -34,16 +34,19 @@ const navMenu = [
     icon: MdLibraryMusic,
     route: "/library",
   },
-  // {
-  //   name: "Create Playlist",
-  //   icon: MdPlaylistAdd,
-  //   route: "/create-playlist",
-  // },
-  // {
-  //   name: "Liked Songs",
-  //   icon: MdFavorite,
-  //   route: "/liked-songs",
-  // },
+];
+
+const musicMenu = [
+  {
+    name: "Create Playlist",
+    icon: MdPlaylistAdd,
+    route: "/create-playlist",
+  },
+  {
+    name: "Liked Songs",
+    icon: MdFavorite,
+    route: "/liked-songs",
+  },
 ];
 const PlayerSideBar = () => {
   return (
@@ -58,14 +61,30 @@ const PlayerSideBar = () => {
         <Box width="120px" marginBottom="20px" paddingX="20px" />
         <NextImage src="/logo.svg" height={60} width={120} />
       </Box>
-      <Box marginBottom="20px">
-        <List spacing={2}>
+      <Box marginBottom="30px">
+        <List spacing={3}>
           {navMenu.map((menu) => (
-            <ListItem paddingX="20px" fontSize="16px" key={menu.name}>
+            <ListItem paddingX="20px" fontSize="20px" key={menu.name}>
               <LinkBox>
                 <NextLink href={menu.route} passHref>
                   <LinkOverlay>
                     <ListIcon as={menu.icon} color="white" marginRight="20px" />
+                    {menu.name}
+                  </LinkOverlay>
+                </NextLink>
+              </LinkBox>
+            </ListItem>
+          ))}
+        </List>
+      </Box>
+      <Box>
+        <List spacing={2}>
+          {musicMenu.map((menu) => (
+            <ListItem paddingX="20px" fontSize="20px" key={menu.name}>
+              <LinkBox>
+                <NextLink href={menu.route} passHref>
+                  <LinkOverlay>
+                    <ListIcon as={menu.icon} color="white" />
                     {menu.name}
                   </LinkOverlay>
                 </NextLink>

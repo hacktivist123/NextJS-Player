@@ -21,6 +21,7 @@
     "easy-peasy": "^5.0.4",
     "format-duration": "^2.0.0",
     "framer-motion": "^6.3.3",
+    "js-base64": "^3.7.2",
     "jsonwebtoken": "^8.5.1",
     "next": "^12.1.6",
     "react": "^18.1.0",
@@ -32,7 +33,7 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.33",
-    "@types/react": "^18.0.12",
+    "@types/react": "18.0.1",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
     "babel-plugin-superjson-next": "^0.4.3",

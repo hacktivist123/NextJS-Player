@@ -17,7 +17,7 @@ import {
   MdFavorite,
 } from "react-icons/md";
 
-import PlaylistMenu from "./playlistMenu";
+import PlaylistMenu from "./playlist-menu";
 
 const navMenu = [
   {

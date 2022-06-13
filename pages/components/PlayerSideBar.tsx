@@ -77,6 +77,7 @@ const PlayerSideBar = () => {
           ))}
         </List>
       </Box>
+      <Divider marginBottom="20px" />
       <Box>
         <List spacing={2}>
           {musicMenu.map((menu) => (

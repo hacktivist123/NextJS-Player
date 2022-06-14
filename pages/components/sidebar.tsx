@@ -50,7 +50,7 @@ const musicMenu = [
   },
 ];
 
-const playerSideBar = () => {
+const playerSidebar = () => {
   return (
     <Box
       width="100%"
@@ -63,10 +63,10 @@ const playerSideBar = () => {
         <Box width="120px" marginBottom="20px" paddingX="20px">
           <NextImage src="/logo.svg" height={60} width={120} />
         </Box>
-        <Box marginBottom="30px">
-          <List spacing={3}>
+        <Box marginBottom="20px">
+          <List spacing={2}>
             {navMenu.map((menu) => (
-              <ListItem paddingX="20px" fontSize="20px" key={menu.name}>
+              <ListItem paddingX="20px" fontSize="16px" key={menu.name}>
                 <LinkBox>
                   <NextLink href={menu.route} passHref>
                     <LinkOverlay>
@@ -103,11 +103,11 @@ const playerSideBar = () => {
             ))}
           </List>
         </Box>
-        <Divider color="gray.800" marginTop="20px" />
+        <Divider color="gray.800" marginTop="10px" />
         <PlaylistMenu />
       </Box>
     </Box>
   );
 };
 
-export default playerSideBar;
+export default playerSidebar;
